@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-resp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-resp .heroe {
+  margin: 10px 20px;
+  border-radius: 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+.main-resp .heroe-img {
+  width: 250px;
+  height: 350px;
+  border-radius: 15px 15px 0 0;
+}
+/*# sourceMappingURL=style.css.map */
