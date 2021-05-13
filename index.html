@@ -11,15 +11,18 @@
 
 <body>
   <header class="header">
-    <input class="header-input" type="text" placeholder="Hero name:" id="name">
+    <input class="header-input" type="text" onkeypress="search(event)" placeholder="Hero name:" id="name">
     <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button>
   </header>
   <main class="main">
-
+    <div class="main-alert" id="alert">
+      <h3 class="main-alert-text" >Type at least 3 letters</h3>
+      <img class="main-alert-img" src="./assets/imgs/warning.svg">
+    </div>
     <section id="resp" class="main-resp"></section>
   </main>
-  <footer>
-
+  <footer class="footer">
+    <h4 class="footer-dev">Develop with <img class="footer-dev-img" src="./assets/imgs/angry.svg">By: <a target="_blank" href="https://github.com/Luscalvesz">LUSCALVES</a> © 2021.</h4>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/script/script.js"></script>

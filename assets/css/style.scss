@@ -20,8 +20,9 @@ body {
   &-input {
     padding: 10px;
     border-radius: 15px;
+    border: none;
     margin-right: 30px;
-    width: 225px
+    width: 225px;
   }
   &-btn {
     background: #16339c;
@@ -43,7 +44,38 @@ body {
 }
 .main {
   margin-top: 10vh;
-
+  display: flex;
+  justify-content: center;
+  &-alert {
+    background: #d60505;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: absolute;
+    top: -50vh;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    &::after{
+      content: '';
+      display: block;
+      background: #d60505;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      position: absolute;
+      top: -10px;
+      width: 30px;
+      height: 15px;
+    }
+    &.show{
+      top: 10vh;
+    }
+    &-img{
+      width: 30px;
+      margin-left: 15px;
+    }
+  }
   &-resp {
     display: flex;
     justify-content: center;
@@ -58,26 +90,52 @@ body {
         height: 350px;
         border-radius: 15px 15px 0 0;
       }
-      &-name{
+      &-name {
         color: white;
         text-align: center;
         font-size: 25px;
       }
-      &-stats{
+      &-stats {
         color: white;
         padding: 20px 5px;
-        &-title{
+        &-title {
           text-align: center;
           margin-bottom: 5px;
           font-size: 20px;
         }
-        &-box{
+        &-box {
           display: flex;
           justify-content: space-between;
-          &-value{
+          &-value {
           }
         }
       }
     }
   }
 }
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  &-dev{
+    color: white;
+    display: flex;
+    align-items: center;
+    &-img{
+      width: 30px;
+      margin: 0 10px;
+    }
+    a{
+      margin: 0 5px;
+    }
+  }
+}
+
+
+
+
