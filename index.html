@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,14 @@
   <title>heroes</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <header>
-    <!-- <img src="" alt="logo"> -->
+  <header class="header">
+    <input class="header-input" type="text" placeholder="Hero name:" id="name">
+    <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button>
   </header>
   <main class="main">
-    <button id="botao" onclick="searchHero()">Search Hero</button>
-    <input type="text" name="" id="name">
+
     <section id="resp" class="main-resp"></section>
   </main>
   <footer>
@@ -22,4 +24,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/script/script.js"></script>
 </body>
+
 </html>
