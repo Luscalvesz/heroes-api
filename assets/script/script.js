@@ -1,58 +1,11 @@
+console.log('Thanks to https://superheroapi.com/index.html for making this possible S2');
 
-// async function searchHero() {
-//   let nameHero = document.getElementById('name').value
-//   let resp = document.getElementById('resp')
-//   const options = {
-//     method: 'GET',
-//     headers: { 'Content-Type': 'application/json', Accept: 'application/vnd.vtex.ds.v10+json' }
-//   };
-//   resp.innerHTML = ""
-//   fetch(`https://codeby-cors.integrationby.com.br/https://superheroapi.com/api/3713047672155764/search/${nameHero}`, options)
-//     // fetch(`https://codeby-cors.integrationby.com.br/https://superheroapi.com/api/3713047672155764/${number}`, options)
-//     .then(response => response.text())
-//     .then(result => {
-//       let data = JSON.parse(result)
-//       data.results.forEach(element => {
-
-//         resp.innerHTML += `
-//         <div class="hero">
-//           <img class="hero-img" src="${element.image.url}">
-//           <p class="hero-name">${element.name}</p>
-//           <div class="hero-stats">
-//             <h3 class="hero-stats-title">Stats</h3>
-//             <div class="hero-stats-box">
-//               <p class="hero-stats-box-value">Combat: ${element.powerstats.combat}</p>
-//               <p class="hero-stats-box-value">Durability: ${element.powerstats.durability}</p>
-//             </div>
-//             <div class="hero-stats-box">
-//               <p class="hero-stats-box-value">Intelligence: ${element.powerstats.intelligence}</p>
-//               <p class="hero-stats-box-value">Power: ${element.powerstats.power}</p>
-//             </div>
-//             <div class="hero-stats-box">
-//               <p class="hero-stats-box-value">Speed: ${element.powerstats.speed}</p>
-//               <p class="hero-stats-box-value">Strength: ${element.powerstats.strength}</p>
-//             </div>
-          
-//           </div>
-//         </div>
-        
-//         `
-
-//       });
-
-
-//     })
-//     .catch(err => console.error(err));
-
-
-// }
-
-function search(event) {
+function search() {
   setTimeout(() => {
-
     let nameHero = document.getElementById('name').value
     let resp = document.getElementById('resp')
     let alert = document.getElementById('alert')
+    // let batata = document.getElementById('batata')
 
     if (nameHero.length < 3) {
       alert.classList.add('show')
@@ -69,12 +22,20 @@ function search(event) {
         .then(response => response.text())
         .then(result => {
           let data = JSON.parse(result)
+          console.log(data);
+          // n = 0
+
+
+          // var batataArr = document.querySelectorAll('#batata')[n].textContent
+
+          // if (element.id  ) {
+            // var arr = []
+
           data.results.forEach(element => {
-            // console.log(element);
-            // console.log(element.name);
 
             resp.innerHTML += `
         <div class="hero">
+          
           <img class="hero-img" src="${element.image.url}">
           <p class="hero-name">${element.name}</p>
           <div class="hero-stats">
@@ -91,11 +52,37 @@ function search(event) {
               <p class="hero-stats-box-value">Speed: ${element.powerstats.speed}</p>
               <p class="hero-stats-box-value">Strength: ${element.powerstats.strength}</p>
             </div>
-          
+            <div class="hero-stats-buttons">
+              <button class="hero-stats-buttons-btn" onclick="seeMore()">See More</button>
+              <button class="hero-stats-buttons-btn squad" value="" onclick="addSquad(${element.id})">Add to Squad</button>
+            </div>
           </div>
         </div>
         `
+        // <button class="hero-stats-buttons-btn squad" value="${element.id}" onclick="addSquad(event)">Add to Squad</button>
+            
+            // arr.push(element.id)
+            
+            // // console.log(arr);
+            // arr.forEach(id => {
+            //   console.log("id", id);
+            //   console.log(element.id);
+            //   if (element.id == id) {
+            //     console.log('qudhaidsdahsdoasuhdd');
+            //   }
+            //   // var t = arr[0].includes(sla)
+            // })
+
+            // var sla = 577
+
+            // console.log(t);
+
+            // console.log(arr);
+            // n++
           });
+
+
+          // }
 
 
         })
@@ -110,7 +97,17 @@ function search(event) {
 
 
 
-  }, 1000);
+  }, 2000);
 
+
+}
+
+
+var ids = []
+function addSquad(id){
+  
+  ids.push(id)
+  console.log(ids);
+  localStorage.setItem('squad', ids)
 
 }

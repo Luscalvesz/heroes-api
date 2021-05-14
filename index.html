@@ -11,15 +11,20 @@
 
 <body>
   <header class="header">
-    <input class="header-input" type="text" onkeypress="search(event)" placeholder="Hero name:" id="name">
-    <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button>
+    <input class="header-input" type="text" onkeyup="search(event)" placeholder="Hero name:" id="name">
+    <!-- <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button> -->
   </header>
   <main class="main">
     <div class="main-alert" id="alert">
       <h3 class="main-alert-text" >Type at least 3 letters</h3>
       <img class="main-alert-img" src="./assets/imgs/warning.svg">
     </div>
-    <section id="resp" class="main-resp"></section>
+    <section id="resp" class="main-resp">
+      <h3>Write here the name of your favourite hero!</h3>
+      <h3>Click here to see more information about the hero.</h3>
+      <h3>And here, to add your favourite hero to your squad.</h3>
+      <h3>If you want to see your squad, click here.</h3>
+    </section>
   </main>
   <footer class="footer">
     <h4 class="footer-dev">Develop with <img class="footer-dev-img" src="./assets/imgs/angry.svg">By: <a target="_blank" href="https://github.com/Luscalvesz">LUSCALVES</a> © 2021.</h4>

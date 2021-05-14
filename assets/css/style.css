@@ -6,8 +6,7 @@
 }
 
 body {
-  background: url("../imgs/bg1.jpg") no-repeat;
-  background-size: cover;
+  background: url("../imgs/bg1.jpg");
 }
 
 .header {
@@ -50,8 +49,6 @@ body {
 
 .header-btn:hover {
   background: #1c1cff;
-  -webkit-box-shadow: 0px 6px 15px #0000ff61;
-          box-shadow: 0px 6px 15px #0000ff61;
   padding: 10px 20px;
 }
 
@@ -117,6 +114,7 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .main-resp .hero {
@@ -155,6 +153,39 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.main-resp .hero-stats-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main-resp .hero-stats-buttons-btn {
+  background: #16339c;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 0px;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.main-resp .hero-stats-buttons-btn:hover {
+  background: #1c1cff;
+}
+
+.main-resp .hero-stats-buttons-btn.squad {
+  background: #9c161d;
+}
+
+.main-resp .hero-stats-buttons-btn.squad:hover {
+  background: #ca1a23;
 }
 
 .footer {
