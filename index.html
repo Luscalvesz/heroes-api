@@ -11,23 +11,33 @@
 
 <body>
   <header class="header">
-    <input class="header-input" type="text" onkeyup="search(event)" placeholder="Hero name:" id="name">
-    <!-- <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button> -->
+    <!-- <div class="header-box"> -->
+      <input class="header-box-input" type="text" onkeyup="search(event)" placeholder="Hero name:" id="name">
+      <!-- <button class="header-btn" id="botao" onclick="searchHero()">Search Hero</button> -->
+
+      <h3 id="stepsFind" class="header-box-find">1º Write here the name of your favourite hero!</h3>
+    <!-- </div> -->
   </header>
   <main class="main">
     <div class="main-alert" id="alert">
-      <h3 class="main-alert-text" >Type at least 3 letters</h3>
+      <h3 class="main-alert-text">Type at least 3 letters</h3>
       <img class="main-alert-img" src="./assets/imgs/warning.svg">
     </div>
     <section id="resp" class="main-resp">
-      <h3>Write here the name of your favourite hero!</h3>
-      <h3>Click here to see more information about the hero.</h3>
-      <h3>And here, to add your favourite hero to your squad.</h3>
-      <h3>If you want to see your squad, click here.</h3>
+      <div class="main-resp-steps">
+        <!-- <h3 class="main-resp-steps-text">Write here the name of your favourite hero!</h3> -->
+        <h3 id="stepsInfo" class="main-resp-steps-text info">2º Click here to see more information about the hero.</h3>
+        <h3 id="stepsFav" class="main-resp-steps-text fav">3º And here, to add your favourite hero to your squad.</h3>
+        <!-- <h3 class="main-resp-steps-text">If you want to see your squad, click here.</h3> -->
+        <img id="stepsImg" class="main-resp-steps-img" src="./assets/imgs/narutinho.PNG">
+        <h3 id="stepsImgTxt" class="main-resp-steps-imgTxt">The heroes will appear here!</h3>
+        <!-- <img class="main-resp-steps-cursor" src="./assets/imgs/cursor.svg" alt=""> -->
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <h4 class="footer-dev">Develop with <img class="footer-dev-img" src="./assets/imgs/angry.svg">By: <a target="_blank" href="https://github.com/Luscalvesz">LUSCALVES</a> © 2021.</h4>
+    <h4 class="footer-dev">Develop with <img class="footer-dev-img" src="./assets/imgs/angry.svg">By: <a target="_blank"
+        href="https://github.com/Luscalvesz">LUSCALVES</a> © 2021.</h4>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/script/script.js"></script>

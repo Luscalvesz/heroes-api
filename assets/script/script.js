@@ -1,10 +1,52 @@
 console.log('Thanks to https://superheroapi.com/index.html for making this possible S2');
 
+function steps() {
+  let stepsInfo = document.getElementById('stepsInfo')
+  let stepsFav = document.getElementById('stepsFav')
+  let stepsImg = document.getElementById('stepsImg')
+  let stepsFind = document.getElementById('stepsFind')
+  let stepsImgTxt = document.getElementById('stepsImgTxt')
+
+  setTimeout(() => {
+    stepsFind.classList.add('active')
+  }, 1000);
+  setTimeout(() => {
+    stepsFind.classList.add('bounce')
+  }, 2400);
+  setTimeout(() => {
+    stepsImg.classList.add('active')
+    stepsImgTxt.classList.add('active')
+  }, 3000);
+  setTimeout(() => {
+    stepsInfo.classList.add('active')
+  }, 5000);
+  setTimeout(() => {
+    stepsFav.classList.add('active')
+  }, 7000);
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 function search() {
   setTimeout(() => {
     let nameHero = document.getElementById('name').value
     let resp = document.getElementById('resp')
     let alert = document.getElementById('alert')
+    document.getElementById('stepsFind').style.opacity="0"
+
     // let batata = document.getElementById('batata')
 
     if (nameHero.length < 3) {
@@ -105,9 +147,10 @@ function search() {
 
 var ids = []
 function addSquad(id){
-  
+
   ids.push(id)
   console.log(ids);
   localStorage.setItem('squad', ids)
 
 }
+window.onload = steps()
